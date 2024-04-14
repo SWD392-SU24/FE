@@ -6,9 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./components/** ./app/** -c .eslintrc.json --ext ts,tsx",
-    "lint:fix": "eslint ./components/** ./app/** -c .eslintrc.json --fix --ext ts,tsx",
-    "format:fix": "prettier --write \"app/**/(*.tsx|*.ts|*.css|*.scss)\" \"components/**/(*.tsx|*.ts|*.css|*.scss)\""
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
+    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*/**/*.{js,jsx,ts,tsx}": [
+        "prettier --write",
+        "eslint --fix",
+        "eslint"
+    ],
+    "*/**/*.{json,css,md}": [
+        "prettier --write"
+    ]
+},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -17,6 +34,8 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-query": "^5.29.2",
     "@tanstack/react-query-devtools": "^5.29.2",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "next": "14.2.1",
@@ -37,9 +56,9 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "14.2.1",
+    "eslint-config-next": "^14.2.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -47,6 +66,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-unused-imports": "^3.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.13",

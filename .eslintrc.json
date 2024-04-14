@@ -7,6 +7,7 @@
   },
   "parser": "babel-eslint",
   "extends": [
+    "next",
     "next/core-web-vitals",
     "eslint:recommended",
     "airbnb",
@@ -15,6 +16,7 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "globals": {
@@ -23,7 +25,7 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true // enable linting for jsx files
+      "jsx": true
     },
     "ecmaVersion": 11,
     "sourceType": "module"
@@ -40,7 +42,7 @@
       "rootDir": ["./"]
     }
   },
-  "plugins": ["react", "react-hooks","unused-imports","prettier"],
+  "plugins": ["react", "react-hooks", "unused-imports", "prettier"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -63,9 +65,20 @@
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
     "react/react-in-jsx-scope": "off",
-   // NextJs specific fix: allow jsx syntax in js files
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
-    "react/display-name": 1
-
+    "prefer-const": "warn",
+    "no-var": "warn",
+    "object-shorthand": "warn",
+    "quote-props": ["warn", "as-needed"],
+    "react/jsx-fragments": ["warn", "element"],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "prettier/prettier": "warn"
   }
 }
