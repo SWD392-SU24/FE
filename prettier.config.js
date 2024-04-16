@@ -9,7 +9,6 @@ module.exports = {
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",
-
     "^types$",
     "^@/types/(.*)$",
     "^@/config/(.*)$",
@@ -19,7 +18,6 @@ module.exports = {
     "^@/components/(.*)$",
     "^@/styles/(.*)$",
     "^@/app/(.*)$",
-
     "^[./]",
   ],
   importOrderSeparation: true,
