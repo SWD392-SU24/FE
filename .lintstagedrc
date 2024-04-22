@@ -1,10 +1,10 @@
 {
     "*/**/*.{js,jsx,ts,tsx}": [
-        "prettier --write",
-        "eslint ./components/** ./app/** -c .eslintrc.json --fix --ext ts,tsx",
-        "eslint ./components/** ./app/** -c .eslintrc.json --ext ts,tsx"
+      "eslint ./components/** ./app/** -c .eslintrc.json --fix --ext ts,tsx",
+      "eslint ./components/** ./app/** -c .eslintrc.json --ext ts,tsx",
+      "prettier --write --cache"
     ],
     "*/**/*.{json,css,md}": [
-        "prettier --write"
+      "prettier --write --cache"
     ]
 }
