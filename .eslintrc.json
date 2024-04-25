@@ -79,6 +79,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "warn"
   }
 }
