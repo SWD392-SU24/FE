@@ -6,4 +6,4 @@ node_modules
 components/ui/*
 components/tools/*
 components/themes/*
-env.ts
+env.mjs
