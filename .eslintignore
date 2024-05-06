@@ -7,3 +7,4 @@ components/ui/*
 components/tools/*
 components/themes/*
 env.mjs
+next.config.mjs
