@@ -5,7 +5,7 @@
     "es6": true,
     "node": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "next",
     "next/core-web-vitals",
@@ -80,6 +80,12 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
-    "prettier/prettier": "warn"
+    "import/prefer-default-export": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
