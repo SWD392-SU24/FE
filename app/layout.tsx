@@ -1,11 +1,10 @@
 import React from "react"
 
-import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
 import { Toaster } from "sonner"
 
-import { siteConfig } from "@/config/site"
+import { constructMetadata } from "@/config/site"
 
 import ThemeProvider from "@/components/themes/theme-provider"
 import { ReactQueryClientProvider } from "@/components/tools/react-query-client-provider"
@@ -15,18 +14,7 @@ import "@/styles/globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-}
+export const metadata = constructMetadata()
 
 export default function RootLayout({
   children,
@@ -39,7 +27,9 @@ export default function RootLayout({
         <ReactQueryClientProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Toaster richColors />
-            <div>{children}</div>
+            <main className="flex min-h-[calc(100vh-3.5rem-1px)] flex-col">
+              <div className="flex h-full flex-1 flex-col">{children}</div>
+            </main>
             <TailwindIndicator />
           </ThemeProvider>
         </ReactQueryClientProvider>
