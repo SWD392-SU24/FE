@@ -1,16 +1,20 @@
-import React from "react"
-
+import { Metadata } from "next"
 import Link from "next/link"
 
 import SignInForm from "@/containers/signin-page/signin-form"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+
+export const metadata: Metadata = {
+  title: "Sign In",
+  description: "Sign in to DentiCare",
+}
 
 export default function Page() {
   return (
-    <div className="grid-col-1 grid p-8  lg:grid-cols-2">
-      <section className="col-span-1 inline-flex flex-col items-center justify-center lg:min-h-[600px]">
+    <div className="grid-col-1 grid   lg:grid-cols-3">
+      <section className="col-span-1 inline-flex min-h-screen flex-col items-center justify-center">
         <div className="w-80">
           <div className="flex flex-col items-start justify-start space-y-2">
             <h2 className="text-center text-2xl font-semibold leading-9 tracking-tight text-primary">
@@ -21,8 +25,13 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-10">
-            <SignInForm />
+          <div className="mt-10 space-y-4">
+            <Button variant="outline" className="w-full">
+              Continue with Google
+            </Button>
+            <Button variant="outline" className="w-full">
+              Continue with Facebook
+            </Button>
           </div>
 
           <div className="relative mt-10 w-full">
@@ -32,35 +41,23 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-20 space-y-4">
-            <Button variant="outline" className="w-full">
-              Continue with Google
-            </Button>
-            <Button variant="outline" className="w-full">
-              Continue with Facebook
-            </Button>
+          <div className="mt-20 ">
+            <SignInForm />
           </div>
 
-          <div className="mt-8 flex items-center justify-center">
+          <div className="mt-6 flex items-center justify-center text-xs">
             <span>Don&apos;t have an account?</span>
             <Link
               href="/auth/register"
-              className={buttonVariants({
-                variant: "link",
-              })}
+              className="ml-1 font-semibold text-primary underline"
             >
               Sign Up Now
             </Link>
           </div>
         </div>
       </section>
-      <section className="col-span-1 hidden lg:block">
-        <div className="h-full w-full rounded-3xl ">
-          <img
-            className="h-[600px] w-[816px] rounded-3xl"
-            src="https://via.placeholder.com/816x600"
-          />
-        </div>
+      <section className="col-span-2 hidden border border-l lg:block">
+        <div className="h-full w-full  bg-slate-100 shadow-md" />
       </section>
     </div>
   )

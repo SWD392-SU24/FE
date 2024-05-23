@@ -1,11 +1,13 @@
 "use client"
 
-import Link from "next/link"
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 
-import { SignInSchema, SignInType } from "@/lib/schemas/auth.schema"
+import {
+  RegisterSchema,
+  RegisterType,
+  SignInType,
+} from "@/lib/schemas/auth.schema"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -20,12 +22,14 @@ import { Label } from "@/components/ui/label"
 
 import PasswordInput from "@/components/password-input"
 
-export default function SignInForm() {
-  const form = useForm<SignInType>({
-    resolver: zodResolver(SignInSchema),
+export default function RegisterForm() {
+  const form = useForm<RegisterType>({
+    resolver: zodResolver(RegisterSchema),
     defaultValues: {
+      name: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   })
 
@@ -36,6 +40,19 @@ export default function SignInForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <Label className="text-xs">Name</Label>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="email"
@@ -56,12 +73,21 @@ export default function SignInForm() {
             <FormItem>
               <div className="flex items-center justify-between">
                 <Label className="text-xs">Password</Label>
-                <Link
-                  href="/auth/forgot-password"
-                  className="text-xs font-semibold text-primary underline"
-                >
-                  Forgot Password?
-                </Link>
+              </div>
+              <FormControl>
+                <PasswordInput {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="confirmPassword"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-center justify-between">
+                <Label className="text-xs">Confirm Password</Label>
               </div>
               <FormControl>
                 <PasswordInput {...field} />
@@ -71,7 +97,7 @@ export default function SignInForm() {
           )}
         />
         <Button type="submit" className="w-full">
-          Sign in
+          Register
         </Button>
       </form>
     </Form>
