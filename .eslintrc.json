@@ -35,17 +35,29 @@
       "version": "detect"
     },
     "tailwindcss": {
-      "callees": ["cn"],
+      "callees": [
+        "cn"
+      ],
       "config": "tailwind.config.ts"
     },
     "next": {
-      "rootDir": ["./"]
+      "rootDir": [
+        "./"
+      ]
     }
   },
-  "plugins": ["react", "react-hooks", "unused-imports", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "unused-imports",
+    "prettier"
+  ],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
       "parser": "@typescript-eslint/parser"
     }
   ],
@@ -68,12 +80,21 @@
     "prefer-const": "warn",
     "no-var": "warn",
     "object-shorthand": "warn",
-    "quote-props": ["warn", "as-needed"],
-    "react/jsx-fragments": ["warn", "element"],
+    "quote-props": [
+      "warn",
+      "as-needed"
+    ],
+    "react/jsx-fragments": [
+      "warn",
+      "element"
+    ],
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".ts", ".tsx"]
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
@@ -86,6 +107,7 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "react/jsx-pascal-case": "off"
   }
 }

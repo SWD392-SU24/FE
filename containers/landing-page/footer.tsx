@@ -3,53 +3,124 @@ import React from "react"
 
 import Link from "next/link"
 
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, Mail, Phone } from "lucide-react"
 
-import { FOOTER_COMPANY_INFO } from "@/lib/constants/footer"
+import {
+  FOOTER_COMPANY_INFO,
+  FOOTER_CONTACT_INFO,
+} from "@/lib/constants/footer"
 
+import { Icons } from "@/components/icons"
 import MaxWidthWrapper from "@/components/max-width-wrapper"
 
 export default function Footer() {
   return (
     <footer className="h-full bg-[#202942] pt-10 text-white">
-      <MaxWidthWrapper className="mb-10 grid grid-cols-12 gap-10">
-        <div className="col-span-4 flex flex-col items-start justify-start">
+      <MaxWidthWrapper className="mb-10 grid grid-cols-2 gap-10  lg:grid-cols-12">
+        <div className="col-span-2 flex flex-col items-start justify-start lg:col-span-4">
           <Link href="/" className="flex items-center gap-x-2 ">
             <img src="/logo/logo-bg-white.png" alt="logo" className="size-7" />
             <span className="text-lg font-semibold">DentiCare</span>
           </Link>
-          <p className="mt-4 text-xs text-[#adb5bd]">
-            DentiCare is a platform connecting customers with private dental
-            clinics in Vietnam. Its mission is to simplify the dental care
-            experience, offering comprehensive solutions that prioritize
-            long-term health and customer satisfaction.
+          <p className="mt-4 text-xs tracking-tighter text-[#adb5bd]">
+            DentiCare mission is to simplify the dental care experience,
+            offering comprehensive solutions that prioritize long-term health
+            and customer satisfaction.
           </p>
         </div>
 
-        <div className="col-span-2">
-          <FooterColumn title="Company">
+        <div className="col-span-1 lg:col-span-2">
+          <FooterColumn title={FOOTER_COMPANY_INFO.title}>
             <ul className="text-foreground-footer space-y-2 text-sm">
               {FOOTER_COMPANY_INFO.links.map((item) => (
-                <li
+                <Link
+                  href={item.url}
                   key={item.label}
-                  className="hover:text-foreground-footer-hover flex items-center hover:translate-x-1"
+                  className="hover:text-foreground-footer-hover flex items-center transition duration-100 hover:translate-x-1"
                 >
                   <ChevronRight className="mr-2 size-4" />
                   {item.label}
-                </li>
+                </Link>
               ))}
             </ul>
           </FooterColumn>
         </div>
-        <div className="col-span-2">2</div>
-        <div className="col-span-3">3</div>
+        <div className="col-span-1 lg:col-span-2">
+          <FooterColumn title={FOOTER_COMPANY_INFO.title}>
+            <ul className="text-foreground-footer space-y-2 text-sm">
+              {FOOTER_COMPANY_INFO.links.map((item) => (
+                <Link
+                  href={item.url}
+                  key={item.label}
+                  className="hover:text-foreground-footer-hover flex items-center transition duration-100 hover:translate-x-1"
+                >
+                  <ChevronRight className="mr-2 size-4" />
+                  {item.label}
+                </Link>
+              ))}
+            </ul>
+          </FooterColumn>
+        </div>
+        <div className="col-span-2 lg:col-span-3">
+          <FooterColumn title={FOOTER_CONTACT_INFO.title}>
+            <ul className="text-foreground-footer space-y-2 text-sm">
+              <Link
+                href="mailto:support-center@denticare.com"
+                className="hover:text-foreground-footer-hover flex items-center"
+              >
+                <Mail className="mr-2 size-4" /> support-center@denticare.com
+              </Link>
+              <Link
+                href="tel:+84 123 456 789"
+                className="hover:text-foreground-footer-hover flex items-center"
+              >
+                <Phone className="mr-2 size-4" />{" "}
+                {FOOTER_CONTACT_INFO.links[0].value}
+              </Link>
+            </ul>
+            <div className="text-foreground-footer flex items-center gap-x-2">
+              <button
+                type="button"
+                className="flex size-7 items-center justify-center rounded-full bg-[#2c385a] hover:bg-primary hover:text-white"
+              >
+                <Icons.facebook className="size-4" />
+              </button>
+              <button
+                type="button"
+                className="flex size-7 items-center justify-center rounded-full bg-[#2c385a] hover:bg-primary hover:text-white"
+              >
+                <Icons.instagram className="size-4" />
+              </button>
+            </div>
+          </FooterColumn>
+        </div>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
         <div className="flex items-center justify-between border-t border-white/10">
-          <div className="text-foreground-footer  py-4 text-sm">
+          <div className="text-foreground-footer  py-5 text-sm">
             <p>© {new Date().getFullYear()} DentiCare. All rights reserved.</p>
           </div>
-          <div className="">1</div>
+
+          <div className="text-foreground-footer flex items-center space-x-2 text-sm">
+            <Link href="/terms" className="hover:text-foreground-footer-hover">
+              Terms
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-foreground-footer-hover"
+            >
+              Privacy
+            </Link>
+            <Link href="/about" className="hover:text-foreground-footer-hover">
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-foreground-footer-hover"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </MaxWidthWrapper>
     </footer>
