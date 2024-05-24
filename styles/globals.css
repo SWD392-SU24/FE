@@ -56,4 +56,12 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .text-foreground-footer {
+    @apply text-[#adb5bd];
+  }
+
+  .text-foreground-footer-hover {
+    @apply text-[#e6e8ea];
+  }
 }
