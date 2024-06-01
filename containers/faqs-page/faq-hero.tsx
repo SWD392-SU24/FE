@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Faqs() {
+export default function FaqsHero() {
   return (
     <div>
       <section

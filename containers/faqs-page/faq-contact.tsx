@@ -1,7 +1,3 @@
-import React from "react"
-
-import Link from "next/link"
-
 import { ICON_SERVICE_CONTACT } from "@/lib/constants/icon-service"
 
 import MaxWidthWrapper from "@/components/max-width-wrapper"
@@ -32,12 +28,9 @@ export default function ContactCardFaq() {
                       <service.icon className="text-3xl" />
                     </div>
                     <div className="card-body mt-4">
-                      <Link
-                        href="/"
-                        className="text-lg font-medium text-gray-700 hover:text-blue-600"
-                      >
+                      <p className="text-lg font-medium text-gray-700 hover:text-blue-600">
                         {service.label}
-                      </Link>
+                      </p>
                       <p className="mt-3 text-gray-600">
                         {service.description}
                       </p>
