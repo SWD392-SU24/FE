@@ -10,7 +10,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 export default function HeroSection() {
   return (
     <section className="bg-slate-50">
-      <MaxWidthWrapper className="pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32">
+      <MaxWidthWrapper className="xl:pt-30 pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8">
         <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
           <div className="relative mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="absolute -top-10 left-0 hidden w-full lg:block">
@@ -32,15 +32,19 @@ export default function HeroSection() {
               <div className="space-y-2">
                 <li className="flex items-center gap-1.5 text-left">
                   <Check className="h-5 w-5 shrink-0 text-primary" />
-                  High-quality, durable material
-                </li>
-                <li className="flex items-center gap-1.5 text-left">
-                  <Check className="h-5 w-5 shrink-0 text-primary" />5 year
-                  print guarantee
+                  Efficient dentist management
                 </li>
                 <li className="flex items-center gap-1.5 text-left">
                   <Check className="h-5 w-5 shrink-0 text-primary" />
-                  Modern iPhone models supported
+                  Seamless booking system
+                </li>
+                <li className="flex items-center gap-1.5 text-left">
+                  <Check className="h-5 w-5 shrink-0 text-primary" />
+                  Real-time analytics and reporting
+                </li>
+                <li className="flex items-center gap-1.5 text-left">
+                  <Check className="h-5 w-5 shrink-0 text-primary" />
+                  24/7 customer support
                 </li>
               </div>
             </ul>
@@ -96,7 +100,7 @@ export default function HeroSection() {
             <img
               src="/assets/about-2.png"
               alt="hero"
-              className=" select-none"
+              className="pointer-events-none"
             />
           </div>
         </div>
