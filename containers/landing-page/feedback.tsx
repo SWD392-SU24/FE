@@ -9,10 +9,10 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 export default function Feedback() {
   return (
     <section className="mb-2 bg-slate-100 py-24">
-      <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
         <div className="flex flex-col items-center gap-4 sm:gap-6 lg:flex-row">
           <h2 className="order-1 mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl">
-            What our <span className="relative px-2 ">customers </span> say
+            What our <span className="relative px-2">customers </span> say
           </h2>
           <Image
             src="/logo/logo.png"

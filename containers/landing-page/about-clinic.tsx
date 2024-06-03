@@ -9,7 +9,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 export default function AboutClinic() {
   return (
     <div>
-      <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
         <div className="container mx-auto mb-16 mt-20 px-4">
           <div className="flex flex-col items-center lg:flex-row">
             <div className="relative mb-8 lg:mb-0 lg:w-1/2">

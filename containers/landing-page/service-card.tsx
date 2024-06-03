@@ -8,7 +8,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 
 export default function ServiceCard() {
   return (
-    <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+    <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
       <div className="container mx-auto mb-16 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {ICON_SERVICE.links.map((service) => (

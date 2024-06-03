@@ -17,15 +17,12 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo/logo.png"
+                src="/logo/logo-full.png"
                 alt="logo"
                 width={300}
                 height={300}
                 className="pointer-events-none h-[32px] w-full"
               />
-              <span className="ml-1 text-lg font-bold text-primary">
-                DentiCare
-              </span>
             </Link>
             <div className="ml-10 hidden items-center space-x-6 lg:flex">
               <div className="group relative h-16">
@@ -62,7 +59,7 @@ export default function Header() {
 
           <div className="space-x-2">
             <Link
-              href="/auth/signin"
+              href="/auth/sign-in"
               className={buttonVariants({
                 size: "sm",
                 variant: "ghost",
@@ -71,12 +68,12 @@ export default function Header() {
               Sign in
             </Link>
             <Link
-              href="/auth/register"
+              href="/auth/sign-up"
               className={buttonVariants({
                 size: "sm",
               })}
             >
-              Register
+              Become a Member
             </Link>
           </div>
         </div>

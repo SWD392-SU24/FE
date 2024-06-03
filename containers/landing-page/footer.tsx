@@ -17,9 +17,9 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 export default function Footer() {
   return (
     <footer className="h-full bg-[#202942] pt-10 text-white">
-      <MaxWidthWrapper className="mb-10 grid grid-cols-2 gap-10  lg:grid-cols-12">
+      <MaxWidthWrapper className="mb-10 grid grid-cols-2 gap-10 lg:grid-cols-12">
         <div className="col-span-2 flex flex-col items-start justify-start lg:col-span-4">
-          <Link href="/" className="flex items-center gap-x-2 ">
+          <Link href="/" className="flex items-center gap-x-2">
             <Image
               src="/logo/logo-bg-white.png"
               width={300}
@@ -104,7 +104,7 @@ export default function Footer() {
       </MaxWidthWrapper>
       <MaxWidthWrapper>
         <div className="flex items-center justify-between border-t border-white/10">
-          <div className="text-foreground-footer  py-5 text-sm">
+          <div className="text-foreground-footer py-5 text-sm">
             <p>© {new Date().getFullYear()} DentiCare. All rights reserved.</p>
           </div>
 
@@ -142,7 +142,7 @@ type FooterColumnProps = {
 function FooterColumn({ title, children }: FooterColumnProps) {
   return (
     <div className="flex flex-col gap-5">
-      <h4 className=" whitespace-nowrap">{title}</h4>
+      <h4 className="whitespace-nowrap">{title}</h4>
       {children}
     </div>
   )
