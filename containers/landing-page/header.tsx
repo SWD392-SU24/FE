@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 import { ChevronDown } from "lucide-react"
@@ -15,9 +16,11 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
           <div className="flex items-center ">
             <Link href="/" className="flex items-center">
-              <img
+              <Image
                 src="/logo/logo.png"
                 alt="logo"
+                width={300}
+                height={300}
                 className="pointer-events-none h-[32px] w-full"
               />
               <span className="ml-1 text-lg font-bold text-primary">

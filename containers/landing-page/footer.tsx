@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from "react"
 
+import Image from "next/image"
 import Link from "next/link"
 
 import { ChevronRight, Mail, Phone } from "lucide-react"
@@ -19,7 +20,13 @@ export default function Footer() {
       <MaxWidthWrapper className="mb-10 grid grid-cols-2 gap-10  lg:grid-cols-12">
         <div className="col-span-2 flex flex-col items-start justify-start lg:col-span-4">
           <Link href="/" className="flex items-center gap-x-2 ">
-            <img src="/logo/logo-bg-white.png" alt="logo" className="size-7" />
+            <Image
+              src="/logo/logo-bg-white.png"
+              width={300}
+              height={300}
+              alt="logo"
+              className="size-7"
+            />
             <span className="text-lg font-semibold">DentiCare</span>
           </Link>
           <p className="mt-4 text-xs tracking-tighter text-[#adb5bd]">
