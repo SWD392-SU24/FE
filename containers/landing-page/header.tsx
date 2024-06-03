@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 import { ChevronDown } from "lucide-react"
@@ -13,11 +14,13 @@ export default function Header() {
     <header className="sticky inset-x-0 top-0 z-[100] h-16 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <img
+              <Image
                 src="/logo/logo.png"
                 alt="logo"
+                width={300}
+                height={300}
                 className="pointer-events-none h-[32px] w-full"
               />
               <span className="ml-1 text-lg font-bold text-primary">
@@ -43,10 +46,16 @@ export default function Header() {
                 </div>
               </div>
               <Link
-                href="/faqs"
+                href="/about-us"
                 className="text-sm font-semibold text-primary hover:text-primary/75"
               >
                 About Us
+              </Link>
+              <Link
+                href="/faqs"
+                className="text-sm font-semibold text-primary hover:text-primary/75"
+              >
+                FAQ
               </Link>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import React from "react"
 
+import Image from "next/image"
+
 import { Check, Star } from "lucide-react"
 
 import MaxWidthWrapper from "@/components/max-width-wrapper"
@@ -12,9 +14,11 @@ export default function Feedback() {
           <h2 className="order-1 mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl">
             What our <span className="relative px-2 ">customers </span> say
           </h2>
-          <img
-            src="logo/logo.png"
+          <Image
+            src="/logo/logo.png"
             alt="img"
+            width={300}
+            height={300}
             className="order-0 w-16 lg:order-2"
           />
         </div>
@@ -40,8 +44,10 @@ export default function Feedback() {
               </p>
             </div>
             <div className="mt-2 flex gap-4">
-              <img
+              <Image
                 className="h-12 w-12 rounded-full object-cover"
+                width={300}
+                height={300}
                 src="/assets/user-3.png"
                 alt="user"
               />
@@ -76,8 +82,10 @@ export default function Feedback() {
               </p>
             </div>
             <div className="mt-2 flex gap-4">
-              <img
+              <Image
                 className="h-12 w-12 rounded-full object-cover"
+                width={300}
+                height={300}
                 src="/assets/user-4.jpg"
                 alt="user"
               />

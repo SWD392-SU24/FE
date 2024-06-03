@@ -23,13 +23,13 @@ export default function ServiceCard() {
               </div>
               <div className="card-body text-left">
                 <a
-                  href=""
+                  href="/"
                   className="title text-lg font-medium text-gray-700 hover:text-blue-600"
                 >
                   {service.label}
                 </a>
                 <p className="mt-3 text-gray-400">{service.description}</p>
-                <a href="" className="mt-2 flex items-center text-primary">
+                <a href="/" className="mt-2 flex items-center text-primary">
                   Read More <ArrowRight className="ml-1 size-4" />
                 </a>
               </div>
