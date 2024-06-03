@@ -14,7 +14,7 @@ export default function Header() {
     <header className="sticky inset-x-0 top-0 z-[100] h-16 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo/logo.png"
@@ -46,7 +46,7 @@ export default function Header() {
                 </div>
               </div>
               <Link
-                href="/aboutus"
+                href="/about-us"
                 className="text-sm font-semibold text-primary hover:text-primary/75"
               >
                 About Us
