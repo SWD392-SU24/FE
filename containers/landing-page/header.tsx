@@ -46,10 +46,16 @@ export default function Header() {
                 </div>
               </div>
               <Link
-                href="/faqs"
+                href="/aboutus"
                 className="text-sm font-semibold text-primary hover:text-primary/75"
               >
                 About Us
+              </Link>
+              <Link
+                href="/faqs"
+                className="text-sm font-semibold text-primary hover:text-primary/75"
+              >
+                FAQ
               </Link>
             </div>
           </div>
