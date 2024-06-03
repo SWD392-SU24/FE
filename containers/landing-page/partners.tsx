@@ -30,8 +30,8 @@ export default function Partners() {
     <section className="bg-gray-100 py-5">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-5">
-          {partners.map((partner, index) => (
-            <div key={index} className="flex justify-center">
+          {partners.map((partner) => (
+            <div key={partner.name} className="flex justify-center">
               <div className="p-4">
                 <Image
                   src={partner.logo}

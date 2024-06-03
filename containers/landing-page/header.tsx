@@ -14,14 +14,14 @@ export default function Header() {
     <header className="sticky inset-x-0 top-0 z-[100] h-16 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
-          <div className="flex items-center ">
-            <Link href="/">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/logo/logo-full.png"
                 alt="logo"
+                width={300}
+                height={300}
                 className="pointer-events-none h-[32px] w-full"
-                width={200}
-                height={200}
               />
             </Link>
             <div className="ml-10 hidden items-center space-x-6 lg:flex">
@@ -43,10 +43,16 @@ export default function Header() {
                 </div>
               </div>
               <Link
-                href="/faqs"
+                href="/about-us"
                 className="text-sm font-semibold text-primary hover:text-primary/75"
               >
                 About Us
+              </Link>
+              <Link
+                href="/faqs"
+                className="text-sm font-semibold text-primary hover:text-primary/75"
+              >
+                FAQ
               </Link>
             </div>
           </div>

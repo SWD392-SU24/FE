@@ -8,7 +8,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 
 export default function ServiceCard() {
   return (
-    <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+    <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
       <div className="container mx-auto mb-16 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {ICON_SERVICE.links.map((service) => (
@@ -23,13 +23,13 @@ export default function ServiceCard() {
               </div>
               <div className="card-body text-left">
                 <a
-                  href=""
+                  href="/"
                   className="title text-lg font-medium text-gray-700 hover:text-blue-600"
                 >
                   {service.label}
                 </a>
                 <p className="mt-3 text-gray-400">{service.description}</p>
-                <a href="" className="mt-2 flex items-center text-primary">
+                <a href="/" className="mt-2 flex items-center text-primary">
                   Read More <ArrowRight className="ml-1 size-4" />
                 </a>
               </div>

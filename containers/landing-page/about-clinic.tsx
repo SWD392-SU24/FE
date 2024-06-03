@@ -9,7 +9,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper"
 export default function AboutClinic() {
   return (
     <div>
-      <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
         <div className="container mx-auto mb-16 mt-20 px-4">
           <div className="flex flex-col items-center lg:flex-row">
             <div className="relative mb-8 lg:mb-0 lg:w-1/2">
@@ -32,16 +32,16 @@ export default function AboutClinic() {
                   simple consultation. Thank you.
                 </p>
                 <p className="mt-4 text-gray-600">
-                  The most well-known dummy text is the 'Lorem Ipsum', which is
+                  The most well-known dummy text is the Lorem Ipsum, which is
                   said to have originated in the 16th century. Lorem Ipsum is
                   composed in a pseudo-Latin language which more or less
-                  corresponds to 'proper' Latin. It contains a series of real
+                  corresponds to proper Latin. It contains a series of real
                   Latin words.
                 </p>
               </div>
               <div className="mt-4">
                 <a
-                  href="#"
+                  href="/"
                   className="hover:bg-primary-dark inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-white"
                 >
                   Read More <ArrowRight className="ml-2" />
