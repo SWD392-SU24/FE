@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 import { ChevronDown } from "lucide-react"
@@ -14,15 +15,14 @@ export default function Header() {
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
           <div className="flex items-center ">
-            <Link href="/" className="flex items-center">
-              <img
-                src="/logo/logo.png"
+            <Link href="/">
+              <Image
+                src="/logo/logo-full.png"
                 alt="logo"
                 className="pointer-events-none h-[32px] w-full"
+                width={200}
+                height={200}
               />
-              <span className="ml-1 text-lg font-bold text-primary">
-                DentiCare
-              </span>
             </Link>
             <div className="ml-10 hidden items-center space-x-6 lg:flex">
               <div className="group relative h-16">
@@ -53,7 +53,7 @@ export default function Header() {
 
           <div className="space-x-2">
             <Link
-              href="/auth/signin"
+              href="/auth/sign-in"
               className={buttonVariants({
                 size: "sm",
                 variant: "ghost",
@@ -62,12 +62,12 @@ export default function Header() {
               Sign in
             </Link>
             <Link
-              href="/auth/register"
+              href="/auth/sign-up"
               className={buttonVariants({
                 size: "sm",
               })}
             >
-              Register
+              Become a Member
             </Link>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react"
 
-import { Inter } from "next/font/google"
+// eslint-disable-next-line camelcase
+import { Plus_Jakarta_Sans } from "next/font/google"
 
 import { Toaster } from "sonner"
 
@@ -12,7 +13,7 @@ import TailwindIndicator from "@/components/tools/tailwind-indicator"
 
 import "@/styles/globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
 
 export const metadata = constructMetadata()
 
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={jakarta.className}>
         <ReactQueryClientProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Toaster richColors />

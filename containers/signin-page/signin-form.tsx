@@ -2,10 +2,7 @@
 
 import Link from "next/link"
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-
-import { SignInSchema, SignInType } from "@/lib/schemas/auth.schema"
+import useSignInForm from "@/hooks/use-signin-form"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -21,27 +18,17 @@ import { Label } from "@/components/ui/label"
 import PasswordInput from "@/components/password-input"
 
 export default function SignInForm() {
-  const form = useForm<SignInType>({
-    resolver: zodResolver(SignInSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-  })
-
-  async function onSubmit(values: SignInType) {
-    console.log(values)
-  }
+  const { form, loading, onHandleSubmit } = useSignInForm()
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={onHandleSubmit} className="space-y-4">
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <Label className="text-xs">Email</Label>
+              <Label>Email</Label>
               <FormControl>
                 <Input placeholder="Example@email.com" {...field} />
               </FormControl>
@@ -55,7 +42,7 @@ export default function SignInForm() {
           render={({ field }) => (
             <FormItem>
               <div className="flex items-center justify-between">
-                <Label className="text-xs">Password</Label>
+                <Label>Password</Label>
                 <Link
                   href="/auth/forgot-password"
                   className="text-xs font-semibold text-primary underline"
@@ -70,7 +57,13 @@ export default function SignInForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full"
+          loadingText="Sign in"
+          isLoading={loading}
+          disabled={loading}
+        >
           Sign in
         </Button>
       </form>
