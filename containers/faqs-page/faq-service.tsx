@@ -5,7 +5,7 @@ import ServiceCard from "@/components/service-card"
 
 export default function ServiceCardFaq() {
   return (
-    <MaxWidthWrapper className="flex flex-col items-center gap-16  sm:gap-32">
+    <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h4 className="text-2xl font-bold">

@@ -20,7 +20,7 @@ export default function SignUpFormDetail({ register, errors }: Props) {
       <p className="text-iridium md:text-sm">
         Please enter your information to sign up for DentiCare.
       </p>
-      <ScrollArea className=" h-96 w-full ">
+      <ScrollArea className="h-96 w-full">
         {userType === "owner" ? (
           <div className="w-full space-y-4 pl-1 pr-4">
             <FormGenerator
