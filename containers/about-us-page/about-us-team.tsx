@@ -4,23 +4,19 @@ import Image from "next/image"
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
+import TitleSection from "@/components/title-section"
+
 export default function AboutUsTeam() {
   return (
     <div>
       <section id="team" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-          <div className="space-y-3">
-            <div className="mb-2 inline-block rounded-full bg-blue-50 px-3 py-1 text-sm text-primary">
-              Our Team
-            </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Meet the DentiCare Soft Team
-            </h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our talented team of developers, designers, and project managers
-              are dedicated to delivering exceptional results for our clients.
-            </p>
-          </div>
+          <TitleSection
+            label="Our Team"
+            title="Meet the DentiCare Soft Team"
+            description="Our talented team of developers, designers, and project managers
+              are dedicated to delivering exceptional results for our clients."
+          />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             <div className="flex flex-col items-center justify-center space-y-2">
               <Avatar>

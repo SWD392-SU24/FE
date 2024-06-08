@@ -13,7 +13,7 @@ export default function AccordionFaq() {
       <div className="container mx-auto">
         <div className="mb-12 text-center">
           <h4 className="text-2xl font-bold">General Questions</h4>
-          <p className=" text-gray-500">
+          <p className="text-gray-500">
             Great doctor if you need your family member to get effective
             immediate assistance, emergency treatment, or a simple consultation.
           </p>
@@ -30,7 +30,7 @@ export default function AccordionFaq() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="border-b border-gray-200 bg-gray-50 px-6 py-4 font-medium ">
+                <AccordionTrigger className="border-b border-gray-200 bg-gray-50 px-6 py-4 font-medium">
                   Is it styled?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 text-gray-600">

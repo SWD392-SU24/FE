@@ -26,7 +26,7 @@ export default function AuthLayout({
         </Link>
         {children}
       </div>
-      <div className="max-w-4000px relative hidden max-h-full w-full flex-1 flex-col gap-3 overflow-hidden  bg-cream pl-24 pt-10 lg:flex">
+      <div className="max-w-4000px relative hidden max-h-full w-full flex-1 flex-col gap-3 overflow-hidden bg-cream pl-24 pt-10 lg:flex">
         <h2 className="font-bold text-gravel md:text-4xl">
           Hi, Welcome to <span className="text-primary">DentiCare</span>
         </h2>

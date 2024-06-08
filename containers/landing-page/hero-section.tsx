@@ -3,6 +3,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react"
 
+import Image from "next/image"
+
 import { Check, Star } from "lucide-react"
 
 import MaxWidthWrapper from "@/components/max-width-wrapper"
@@ -95,9 +97,11 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="col-span-full mt-32 flex h-fit w-full justify-center  px-8 sm:px-16 md:px-0 lg:col-span-1 lg:mx-0 lg:mt-20">
+        <div className="col-span-full mt-32 flex h-fit w-full justify-center px-8 sm:px-16 md:px-0 lg:col-span-1 lg:mx-0 lg:mt-20">
           <div className="relative md:max-w-xl">
-            <img
+            <Image
+              width={400}
+              height={400}
               src="/assets/about-2.png"
               alt="hero"
               className="pointer-events-none"

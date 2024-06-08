@@ -4,7 +4,7 @@ export default function FaqsHero() {
   return (
     <div>
       <section
-        className=" relative flex h-[400px] w-full items-center justify-center bg-cover bg-center"
+        className="relative flex h-[400px] w-full items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('/assets/faq.jpg')",
