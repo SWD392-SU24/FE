@@ -5,13 +5,12 @@ import React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { Ellipsis } from "lucide-react"
-
 import { getMenuList } from "@/lib/constants/sidebar-menu-list"
 import { cn } from "@/lib/utils"
 
 import { buttonVariants } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Separator } from "@/components/ui/separator"
 import {
   Tooltip,
   TooltipContent,
@@ -39,7 +38,7 @@ export function Menu({ isOpen }: MenuProps) {
         <ul className="flex min-h-[calc(100vh-48px-36px-16px-32px)] flex-col items-start space-y-1 px-2">
           {menuList.map(({ groupLabel, menus }, index) => (
             <React.Fragment key={index}>
-              <li className={cn("w-full", groupLabel && "pt-5")}>
+              <li className={cn("w-full", groupLabel && "pt-2")}>
                 {(isOpen && groupLabel) || isOpen === undefined ? (
                   <p className="text-muted-foreground">{groupLabel}</p>
                 ) : (
@@ -50,7 +49,7 @@ export function Menu({ isOpen }: MenuProps) {
                       <Tooltip delayDuration={100}>
                         <TooltipTrigger className="w-full">
                           <div className="flex w-full items-center justify-center">
-                            <Ellipsis className="size-5 text-muted-foreground" />
+                            <Separator className="w-full" />
                           </div>
                         </TooltipTrigger>
                         <TooltipContent side="right">

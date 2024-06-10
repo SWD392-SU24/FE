@@ -1,8 +1,8 @@
 import {
   Bookmark,
+  CalendarDays,
   LayoutDashboard,
   Settings,
-  SquarePen,
   Tag,
   Users,
 } from "lucide-react"
@@ -34,7 +34,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/dashboard",
           label: "Dashboard",
-          active: pathname.includes("/clinic"),
+          active: pathname.includes("/dashboard"),
           icon: LayoutDashboard,
           submenus: [],
         },
@@ -44,22 +44,11 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Clinic",
       menus: [
         {
-          href: "",
-          label: "Posts",
-          active: pathname.includes("/posts"),
-          icon: SquarePen,
-          submenus: [
-            {
-              href: "/posts",
-              label: "All Posts",
-              active: pathname === "/posts",
-            },
-            {
-              href: "/posts/new",
-              label: "New Post",
-              active: pathname === "/posts/new",
-            },
-          ],
+          href: `/dentist-schedule`,
+          label: "Manage Dentist Schedule",
+          active: pathname.includes("/dentist-schedule"),
+          icon: CalendarDays,
+          submenus: [],
         },
         {
           href: "/categories",
@@ -93,6 +82,42 @@ export function getMenuList(pathname: string): Group[] {
           active: pathname.includes("/account"),
           icon: Settings,
           submenus: [],
+        },
+      ],
+    },
+  ]
+}
+
+type OwnerMenu = {
+  href: string
+  label: string
+  active: boolean
+}
+
+type OwnerGroup = {
+  groupLabel: string
+  menus: OwnerMenu[]
+}
+
+export function getOwnerMenuList(pathname: string): OwnerGroup[] {
+  return [
+    {
+      groupLabel: "Clinics",
+      menus: [
+        {
+          href: "/dashboard/clinic",
+          label: "All clinics",
+          active: pathname.includes("/dashboard/clinic"),
+        },
+      ],
+    },
+    {
+      groupLabel: "Account",
+      menus: [
+        {
+          href: "/account/me",
+          label: "Preferences",
+          active: pathname.includes("/account/me"),
         },
       ],
     },
