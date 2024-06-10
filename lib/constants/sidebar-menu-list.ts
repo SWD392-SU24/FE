@@ -26,6 +26,12 @@ type Group = {
   menus: Menu[]
 }
 
+const isClinicWithId = (pathname: string) => {
+  // eslint-disable-next-line no-useless-escape
+  const clinicIdPattern = /^\/dashboard\/clinic\/[^\/]+$/
+  return clinicIdPattern.test(pathname)
+}
+
 export function getMenuList(pathname: string): Group[] {
   return [
     {
@@ -34,7 +40,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/dashboard",
           label: "Dashboard",
-          active: pathname.includes("/dashboard"),
+          active: isClinicWithId(pathname),
           icon: LayoutDashboard,
           submenus: [],
         },

@@ -1,3 +1,9 @@
+import ClinicDashboardWrapper from "@/containers/clinic-dashboard-page/clinic-dashboard-wrapper"
+
 export default function Page({ params }: { params: { clinicId: string } }) {
-  return <div>This is dashboard/clinic/{params.clinicId}</div>
+  return (
+    <ClinicDashboardWrapper>
+      This is dashboard/clinic/{params.clinicId}
+    </ClinicDashboardWrapper>
+  )
 }
