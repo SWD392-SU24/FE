@@ -56,7 +56,7 @@ export default function DentistSchedule() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                            <span className="rounded-sm bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+                            <span className="rounded-sm bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
                               Finished
                             </span>
                             <Dot className="mx-2 size-3" />

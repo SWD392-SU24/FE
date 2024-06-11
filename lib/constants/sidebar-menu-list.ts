@@ -38,7 +38,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/dashboard",
+          href: "",
           label: "Dashboard",
           active: isClinicWithId(pathname),
           icon: LayoutDashboard,

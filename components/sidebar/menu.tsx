@@ -3,7 +3,7 @@
 import React from "react"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { useParams, usePathname } from "next/navigation"
 
 import { getMenuList } from "@/lib/constants/sidebar-menu-list"
 import { cn } from "@/lib/utils"
@@ -31,6 +31,7 @@ interface MenuProps {
 export function Menu({ isOpen }: MenuProps) {
   const pathname = usePathname()
   const menuList = getMenuList(pathname)
+  const { clinicId } = useParams()
 
   return (
     <ScrollArea className="[&>div>div[style]]:!block">
@@ -68,7 +69,7 @@ export function Menu({ isOpen }: MenuProps) {
                         <Tooltip delayDuration={100}>
                           <TooltipTrigger asChild>
                             <Link
-                              href={href}
+                              href={`/dashboard/clinic/${clinicId}${href}`}
                               className={buttonVariants({
                                 variant: active ? "blue" : "blueHover",
                                 className:

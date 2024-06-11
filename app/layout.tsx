@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={jakarta.className}>
         <ReactQueryClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <Toaster richColors />
             <main className="flex min-h-[calc(100vh-3.5rem-1px)] flex-col">
               <div className="flex h-full flex-1 flex-col">{children}</div>
