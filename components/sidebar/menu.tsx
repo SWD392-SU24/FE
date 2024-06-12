@@ -69,7 +69,7 @@ export function Menu({ isOpen }: MenuProps) {
                         <Tooltip delayDuration={100}>
                           <TooltipTrigger asChild>
                             <Link
-                              href={`/dashboard/clinic/${clinicId}${href}`}
+                              href={`/dashboard/clinics/${clinicId}${href}`}
                               className={buttonVariants({
                                 variant: active ? "blue" : "blueHover",
                                 className:

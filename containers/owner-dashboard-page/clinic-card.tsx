@@ -29,7 +29,7 @@ export default function ClinicCard({
   const router = useRouter()
 
   const handleClick = () => {
-    router.push(`/dashboard/clinic/${clinicId}`)
+    router.push(`/dashboard/clinics/${clinicId}`)
   }
   return (
     <Card

@@ -7,7 +7,7 @@ import ScheduleToolbar from "@/containers/dentist-schedule-page/schedule-toolbar
 export default function Page() {
   return (
     <ClinicDashboardWrapper title="Dentist Schedule">
-      <div className="mt-4 space-y-4">
+      <div className="space-y-4">
         <ScheduleToolbar />
         <DentistSchedule />
       </div>

@@ -14,8 +14,8 @@ export default function ClinicDashboardWrapper({
   title,
 }: ClinicDashboardWrapperProps) {
   return (
-    <div className={cn("h-full w-full px-2.5 py-4 md:px-10", className)}>
-      <h1 className="text-xl font-semibold">{title}</h1>
+    <div className={cn("h-full w-full px-4 py-6 md:px-10", className)}>
+      <h1 className="mb-6 text-2xl font-semibold text-gray-800">{title}</h1>
       {children}
     </div>
   )

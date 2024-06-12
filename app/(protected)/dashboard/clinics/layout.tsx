@@ -10,14 +10,14 @@ import Header from "@/containers/clinic-dashboard-page/header"
 import Sidebar from "@/containers/owner-dashboard-page/sidebar"
 
 const isClinicWithId = (pathname: string) => {
-  const clinicIdPattern = /^\/dashboard\/clinic\/.+$/
+  const clinicIdPattern = /^\/dashboard\/clinics\/.+$/
   return clinicIdPattern.test(pathname)
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
 
-  const isClinicDashboard = pathname === "/dashboard/clinic"
+  const isClinicDashboard = pathname === "/dashboard/clinics"
 
   if (isClinicDashboard) {
     return (

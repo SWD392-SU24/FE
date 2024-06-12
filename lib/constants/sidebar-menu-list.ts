@@ -1,7 +1,7 @@
 import {
-  Bookmark,
   CalendarDays,
   LayoutDashboard,
+  MessageSquareText,
   Settings,
   Tag,
   Users,
@@ -28,7 +28,7 @@ type Group = {
 
 const isClinicWithId = (pathname: string) => {
   // eslint-disable-next-line no-useless-escape
-  const clinicIdPattern = /^\/dashboard\/clinic\/[^\/]+$/
+  const clinicIdPattern = /^\/dashboard\/clinics\/[^\/]+$/
   return clinicIdPattern.test(pathname)
 }
 
@@ -57,10 +57,10 @@ export function getMenuList(pathname: string): Group[] {
           submenus: [],
         },
         {
-          href: "/categories",
-          label: "Categories",
-          active: pathname.includes("/categories"),
-          icon: Bookmark,
+          href: "/feedback",
+          label: "User Feedback",
+          active: pathname.includes("/feedback"),
+          icon: MessageSquareText,
           submenus: [],
         },
         {

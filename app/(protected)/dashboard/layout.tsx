@@ -11,7 +11,7 @@ export default function DashboardLayout({
 }) {
   const pathname = usePathname()
   if (pathname === "/dashboard") {
-    redirect("/dashboard/clinic")
+    redirect("/dashboard/clinics")
   }
   return <div>{children}</div>
 }

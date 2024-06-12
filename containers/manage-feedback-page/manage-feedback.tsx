@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 
-import { ListFilterIcon, SearchIcon, Star } from "lucide-react"
+import { ListFilterIcon, Star } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,7 +15,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
+
+import SearchInput from "@/components/search-input"
 
 // Interface for Feedback
 interface Feedback {
@@ -86,23 +87,15 @@ export default function ManageFeedback() {
 
   return (
     <div className="flex flex-col">
-      <main className="flex-1 p-6">
+      <main className="flex-1">
         <section>
-          <h3 className="mb-4 text-2xl font-semibold text-gray-800">
-            Feedback Page
-          </h3>
           <div className="mb-6 flex items-center justify-between">
-            <div className="relative flex-1 md:w-[200px] md:flex-none lg:w-[336px]">
-              <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transform text-gray-500" />
-              <Input
-                type="search"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="rounded-md border-gray-300 pl-10 focus:border-gray-400 focus:ring-0"
-              />
-            </div>
-            <div className="ml-4">
+            <SearchInput
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-96"
+            />
+            <div className="gap-x-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="gap-1">
@@ -146,8 +139,8 @@ export default function ManageFeedback() {
               <Card key={feedback.id}>
                 <CardHeader className="flex justify-between">
                   <div>
-                    <CardTitle>{feedback.title}</CardTitle>
-                    <div className="text-sm text-gray-500">
+                    <CardTitle className="text-lg">{feedback.title}</CardTitle>
+                    <div className="mt-1 text-sm text-gray-500">
                       <span>{feedback.date}</span>
                     </div>
                   </div>
@@ -173,7 +166,9 @@ export default function ManageFeedback() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p>{feedback.description}</p>
+                  <p className="text-base tracking-normal">
+                    {feedback.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
