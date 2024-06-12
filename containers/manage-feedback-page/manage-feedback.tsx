@@ -22,7 +22,6 @@ interface Feedback {
   id: string
   title: string
   date: string
-  time: string
   description: string
   rating: number
 }
@@ -33,7 +32,6 @@ const feedbacks: Feedback[] = [
     id: "1",
     title: "Math Feedback",
     date: "May 15, 2023",
-    time: "9:00 AM - 11:00 AM",
     description:
       "This is the final Feedback for the Math course. Make sure to review the material covered in the last 4 weeks.",
     rating: 5.0,
@@ -42,7 +40,6 @@ const feedbacks: Feedback[] = [
     id: "2",
     title: "English Literature Feedback",
     date: "June 1, 2023",
-    time: "2:00 PM - 4:00 PM",
     description:
       "This Feedback will cover the novels and poetry we have studied this semester. Remember to bring your textbook. This Feedback will cover the novels and poetry we have studied this semester. Remember to bring your textbook. This Feedback will cover the novels and poetry we have studied this semester. Remember to bring your textbook",
     rating: 4.0,
@@ -51,7 +48,6 @@ const feedbacks: Feedback[] = [
     id: "3",
     title: "Biology Feedback",
     date: "March 20, 2023",
-    time: "2:00 PM - 4:00 PM",
     description:
       "You performed excellently in the Biology Feedback. Keep up the great work!",
     rating: 3.0,
@@ -60,7 +56,6 @@ const feedbacks: Feedback[] = [
     id: "4",
     title: "History Feedback",
     date: "February 10, 2023",
-    time: "2:00 PM - 4:00 PM",
     description:
       "Your History Feedback result is good, but there is room for improvement. Make sure to review the feedback provided.",
     rating: 2.0,
@@ -69,7 +64,6 @@ const feedbacks: Feedback[] = [
     id: "5",
     title: "History Feedback",
     date: "February 10, 2023",
-    time: "2:00 PM - 4:00 PM",
     description:
       "Your History Feedback result is good, but there is room for improvement. Make sure to review the feedback provided.",
     rating: 1.0,
@@ -155,8 +149,6 @@ export default function ManageFeedback() {
                     <CardTitle>{feedback.title}</CardTitle>
                     <div className="text-sm text-gray-500">
                       <span>{feedback.date}</span>
-                      <span className="mx-2">|</span>
-                      <span>{feedback.time}</span>
                     </div>
                   </div>
                   {/* Render star rating */}
