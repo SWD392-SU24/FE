@@ -50,6 +50,13 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "Clinic",
       menus: [
         {
+          href: `/dentists`,
+          label: "Manage Dentist",
+          active: pathname.includes("/dentists"),
+          icon: Users,
+          submenus: [],
+        },
+        {
           href: `/dentist-schedule`,
           label: "Manage Dentist Schedule",
           active: pathname.includes("/dentist-schedule"),
