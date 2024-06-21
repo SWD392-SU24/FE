@@ -14,9 +14,9 @@ export default function Page() {
       <div className="mx-8 my-6">
         <div className="flex items-center gap-4">
           <div className="flex min-w-[500px] items-center gap-4">
-            <Input placeholder="Search for a clinic" />
+            <Input type="search" placeholder="Search for a clinic" />
             <Link
-              href="/dashboard/clinic/new"
+              href="/dashboard/clinics/new"
               className={buttonVariants({
                 size: "sm",
               })}

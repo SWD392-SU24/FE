@@ -111,9 +111,9 @@ export function getOwnerMenuList(pathname: string): OwnerGroup[] {
       groupLabel: "Clinics",
       menus: [
         {
-          href: "/dashboard/clinic",
+          href: "/dashboard/clinics",
           label: "All clinics",
-          active: pathname.includes("/dashboard/clinic"),
+          active: pathname.includes("/dashboard/clinics"),
         },
       ],
     },

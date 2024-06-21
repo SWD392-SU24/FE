@@ -26,7 +26,7 @@ export default function Sidebar() {
       <SidebarToggle isOpen={sidebar?.isOpen} setIsOpen={sidebar?.setIsOpen} />
       <div className="relative flex h-full flex-col overflow-y-auto px-3 py-4 shadow-sm dark:shadow-zinc-300">
         <Link
-          href="/dashboard/clinic"
+          href="/dashboard/clinics"
           className={cn(
             "inline-flex items-center justify-center whitespace-nowrap transition-transform duration-300 ease-in-out",
             sidebar?.isOpen === false ? "translate-x-1" : "translate-x-0"
