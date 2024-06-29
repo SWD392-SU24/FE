@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 
+import { getFeedbackByClinicId } from "@/actions/manage-feedback"
+import { useQuery } from "@tanstack/react-query"
 import { ListFilterIcon, Star } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -83,6 +85,11 @@ export default function ManageFeedback() {
     const matchesRating =
       selectedRating === null || feedback.rating === selectedRating
     return matchesSearchTerm && matchesRating
+  })
+
+  const { data } = useQuery({
+    queryKey: ["feedbacks"],
+    queryFn: () => getFeedbackByClinicId("8"),
   })
 
   return (

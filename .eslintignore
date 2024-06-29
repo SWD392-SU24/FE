@@ -3,6 +3,7 @@ dist/*
 public
 node_modules
 *.esm.js
+components/*
 components/ui/*
 components/tools/*
 components/themes/*
