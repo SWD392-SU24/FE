@@ -1,7 +1,7 @@
 "use client"
 
-import DentistScheduleAvatarCell from "@/containers/dentist-schedule-page/dentist-schedule-avatar-cell"
-import DentistScheduleCard from "@/containers/dentist-schedule-page/dentist-schedule-card"
+import DentistScheduleAvatarCell from "@/containers/clinic-dentist-schedule-page/dentist-schedule-avatar-cell"
+import DentistScheduleCard from "@/containers/clinic-dentist-schedule-page/dentist-schedule-card"
 import useOwnerCalendar from "@/stores/use-owner-calendar"
 import { ChevronRight, Dot, EllipsisVertical, User } from "lucide-react"
 

@@ -1,6 +1,5 @@
 "use client"
 
-import { DataTableRowActions } from "@/containers/clinic-feedback-page/data-table/data-table-row-actions"
 import { StarFilledIcon } from "@radix-ui/react-icons"
 import { ColumnDef } from "@tanstack/react-table"
 import { format } from "date-fns"
@@ -20,6 +19,11 @@ export const columns: ColumnDef<FeedbackType>[] = [
     accessorKey: "feedbackDescription",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Feedback Description" />
+    ),
+    cell: ({ row }) => (
+      <p className="w-[500px] text-pretty tracking-tight">
+        {row.original.feedbackDescription}
+      </p>
     ),
   },
   {
@@ -44,10 +48,5 @@ export const columns: ColumnDef<FeedbackType>[] = [
         {format(new Date(row.original.feedbackDate), "MMM dd, yyyy hh:mm aa")}
       </span>
     ),
-  },
-  {
-    accessorKey: "actions",
-    header: () => <span className="text-xs">Actions</span>,
-    cell: ({ row }) => <DataTableRowActions row={row} />,
   },
 ]

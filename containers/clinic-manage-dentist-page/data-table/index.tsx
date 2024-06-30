@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { DataTableToolbar } from "@/containers/clinic-feedback-page/data-table/data-table-toolbar"
+import { DataTableToolbar } from "@/containers/clinic-manage-dentist-page/data-table/data-table-toolbar"
 import {
   ColumnDef,
   ColumnFiltersState,
